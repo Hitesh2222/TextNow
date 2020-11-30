@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -50,18 +51,21 @@ public class LoginPage {
     public void newMsgClick(){
         this.newMsg.click();
     }
-    public LoginPage tomsgClick(String phoneNo){
+    public void tomsgClick(String phoneNo) throws InterruptedException {
 //        this.toMsg = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#text-input")));
         this.toMsg.sendKeys(phoneNo,Keys.ENTER);
-        return this;
+        Thread.sleep(2000);
+//        return this;
     }
-    public LoginPage toBodyMsgClick(String bodyMsg){
+    public void toBodyMsgClick(String bodyMsg){
 //        this.bodyMsg = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#text-input")));
         this.bodyMsg.sendKeys(bodyMsg);
-        return this;
+//        return this;
     }
-    public LoginPage sendBtnClick(){
+    public void sendBtnClick() throws InterruptedException {
         this.sendMsg.click();
-        return this;
+        Thread.sleep(2000);
+        newMsgClick();
+//        return this;
     }
 }
