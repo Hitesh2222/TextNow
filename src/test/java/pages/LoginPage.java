@@ -40,10 +40,10 @@ public class LoginPage {
 //        Thread.sleep(2000);
     }
     public void setUserName(){
-        this.userName.sendKeys("chavdahitesh2222@gmail.com");
+        this.userName.sendKeys("");
     }
     public void setPassword(){
-        this.password.sendKeys("19051991Hc!");
+        this.password.sendKeys("");
     }
     public void singinclick(){
         this.singin.click();
