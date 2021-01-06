@@ -16,6 +16,7 @@ public class LoginTest {
     private WebDriver driver;
     @BeforeTest
     public void setup(){
+        // Please load driver executable here..
         System.setProperty("webdriver.chrome.driver","C:\\Users\\Hitesh\\Desktop\\PRAGRA\\chromedriver.exe");
     }
     @BeforeClass
@@ -47,7 +48,7 @@ public class LoginTest {
         loginPage.tomsgClick(phoneNo);
         Thread.sleep(5000);
         loginPage.toBodyMsgClick(bodyMsg);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         loginPage.sendBtnClick();
 //        Thread.sleep(3000);
 //        loginPage.newMsgClick();

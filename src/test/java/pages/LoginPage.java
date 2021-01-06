@@ -41,10 +41,10 @@ public class LoginPage {
     }
     public void setUserName(){
         this.userName.sendKeys("");
-    }
+    }// Please enter username
     public void setPassword(){
         this.password.sendKeys("");
-    }
+    } // Please enter password
     public void singinclick(){
         this.singin.click();
     }
@@ -57,14 +57,17 @@ public class LoginPage {
         Thread.sleep(2000);
 //        return this;
     }
-    public void toBodyMsgClick(String bodyMsg){
+    public void toBodyMsgClick(String bodyMsg) throws InterruptedException {
 //        this.bodyMsg = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#text-input")));
+        this.bodyMsg.click();
         this.bodyMsg.sendKeys(bodyMsg);
+        Thread.sleep(5000);
 //        return this;
     }
     public void sendBtnClick() throws InterruptedException {
+        Thread.sleep(5000);
         this.sendMsg.click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         newMsgClick();
 //        return this;
     }

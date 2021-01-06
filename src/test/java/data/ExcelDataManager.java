@@ -19,7 +19,7 @@ public class ExcelDataManager {
     private Workbook workbook;
 
     public ExcelDataManager() throws IOException {
-        Path path = Paths.get("C:/Users/Hitesh/Desktop/PRAGRA","TextNow.xlsx");
+        Path path = Paths.get(""); // Please provide file location..
         InputStream inputStream = new FileInputStream(path.toFile());
         workbook = new XSSFWorkbook(inputStream);
 
